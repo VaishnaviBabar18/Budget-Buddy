@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2C3E50; /* Dark Text */
+    background-color: #F5F7FA; /* Light Neutral Background */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navbar Styling */
+header {
+    background-color: #243f5b; /* Dark Navy for header */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #F5F7FA; /* Light logo text */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5F7FA;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px; /* Curved edges */
+    transition: color 0.3s, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1b4865; /* Blue hover */
+    color: #FFF;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 140px 20px;
+    background-color: #304756; /* Blue background */
+    color: #FFF; /* Light text */
+    border-radius: 15px 15px 0 0; /* Curved top corners */
+    margin-bottom: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Box shadow for more emphasis */
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.hero-section p {
+    font-size: 22px;
+    margin-top: 15px;
+    opacity: 0;
+    animation: slideIn 2s forwards;
+}
+
+.hero-section button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #FFF; /* White button */
+    color: #2980B9; /* Blue text */
+    border: none;
+    border-radius: 12px; /* Curved button edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s;
+}
+
+.hero-section button:hover {
+    background-color: #546982; /* Brighter hover effect */
+    color: #FFF;
+}
+
+/* Features Section */
+#features {
+    padding: 80px 20px;
+    background-color: #F5F7FA; /* Neutral background */
+    text-align: center;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px; /* Curved edges */
+    border: 1px solid #BDC3C7; /* Light border */
+    width: 30%;
+    min-width: 250px;
+    background-color: #FFF; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    opacity: 0;
+    animation: slideIn 2s forwards;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.feature i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #2980B9; /* Blue icons */
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+/* Tips Section */
+#tips {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #587898; /* Dark background */
+    color: #F5F7FA; /* Light text */
+    border-radius: 0 0 15px 15px; /* Curved bottom edges */
+}
+
+#tips p {
+    font-size: 18px;
+    opacity: 0;
+    animation: slideIn 2s forwards;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    background-color: #FFF;
+    text-align: left;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2C3E50; /* Dark Text */
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #BDC3C7; /* Light border */
+    border-radius: 10px; /* Curved edges */
+    background-color: #F5F7FA; /* Soft background */
+    
+}
+
+form button {
+    padding: 12px;
+    background-color: #113146; /* Blue button */
+    color: #FFF;
+    border: none;
+    border-radius: 10px; /* Curved edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1A73E8; /* Lighter blue on hover */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #2C3E50; /* Dark footer */
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* Logo Image Styles */
+.logo-image {
+    height: 50px; /* Adjust height as needed */
+    margin-left: 15px; /* Space between logo and title */
+    vertical-align: middle; /* Aligns image vertically */
+    padding-left: 0%;
+}
+.footer-heart{text-align:center;font-family: open sans, sans-serif;}
+
+.footer-heart a{border-bottom: 1px solid #f7f5ff;color: #c4c4c4;padding-bottom: .25em; text-decoration: none;}
+
+.footer-heart a:hover{color:#ffffff; background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: .3em;
+  text-decoration: none;}
+
+.emoji{vertical-align: middle;}
+.fade-inn{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.map-container {
+    flex: 1;
+    min-width: 225px;
+  margin-left: 225px;
+  margin-top:0px;
+}
+
+/* Style for Contact Form Inputs */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #3c4f5e;
+}
+
+ 
